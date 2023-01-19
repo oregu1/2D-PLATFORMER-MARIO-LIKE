@@ -5,32 +5,37 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float playerSpeed = 7.0f;
+    public float jumpForce = 7.0f;
 
     float movement = 0;
 
     //REFERENCES
     private Rigidbody2D playerRB;
     private Animator playerAnimator;
+    //private BoxCollider2D coll;
 
     private enum AnimationState
     {
-        idle,
-        run,
-        fall,
-        jump,
-        dblJump,
-        hit
+        idle, //0
+        run, //1
+        fall, //2
+        jump, //3
+        dblJump, //4
+        hit //5
     }
 
-    void Start()
+    AnimationState state = AnimationState.idle;
+
+    public void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
     }
 
-    void Update()
+    public void Update()
     {
         MoveCharacter();
+        
     }
 
     private void MoveCharacter()
@@ -38,5 +43,50 @@ public class PlayerMovement : MonoBehaviour
         movement = Input.GetAxisRaw("Horizontal");
 
         playerRB.velocity = new Vector2(movement * playerSpeed, playerRB.velocity.y);
+
+        Jump();
+
+        UpdateAnimationState();
+    }
+
+    private void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) /*&& IsGrounded()*/)
+        {
+            playerRB.velocity = new Vector2(playerRB.velocity.x, jumpForce);
+        }
+    }
+
+    /*private bool IsGrounded()
+    {
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f);
+    }*/
+
+    private void UpdateAnimationState()
+    {
+        if(movement == 0)
+        {
+            state = AnimationState.idle;
+        }
+        else if(movement > .1f)
+        {
+            state = AnimationState.run;
+            transform.localScale = new Vector2(0.8f, 0.8f);
+        }
+        else if(movement < .1f)
+        {
+            state = AnimationState.run;
+            transform.localScale = new Vector2(-0.8f, 0.8f);
+        } 
+        else if(playerRB.velocity.y > .1f)
+        {
+            state = AnimationState.jump;
+        } 
+        else if(playerRB.velocity.y < -.1f)
+        {
+            state = AnimationState.fall;
+        }
+
+        playerAnimator.SetInteger("AnimState", (int)state);
     }
 }
