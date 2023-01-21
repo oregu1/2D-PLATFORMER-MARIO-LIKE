@@ -99,7 +99,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -199,7 +199,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -218,9 +218,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 68
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -239,9 +239,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 136
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -260,9 +260,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 204
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -281,9 +281,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 272
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -302,9 +302,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 340
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -323,9 +323,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 408
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -344,9 +344,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 476
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -365,9 +365,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 544
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -386,9 +386,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_9
       rect:
         serializedVersion: 2
-        x: 576
+        x: 612
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -407,9 +407,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_10
       rect:
         serializedVersion: 2
-        x: 640
+        x: 680
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -428,9 +428,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_11
       rect:
         serializedVersion: 2
-        x: 704
+        x: 748
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -449,9 +449,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_12
       rect:
         serializedVersion: 2
-        x: 768
+        x: 816
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -470,9 +470,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_13
       rect:
         serializedVersion: 2
-        x: 832
+        x: 884
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -491,9 +491,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_14
       rect:
         serializedVersion: 2
-        x: 896
+        x: 952
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -512,9 +512,9 @@ TextureImporter:
       name: Start (Moving) (64x64)_15
       rect:
         serializedVersion: 2
-        x: 960
+        x: 1020
         y: 0
-        width: 64
+        width: 68
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -525,27 +525,6 @@ TextureImporter:
       bones: []
       spriteID: ae718110d36b8d345b9ba73a4cecac3f
       internalID: 6183351285161404023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Start (Moving) (64x64)_16
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 944b81e805b48f2458a68148e4c00ccd
-      internalID: 7763743175354702852
       vertices: []
       indices: 
       edges: []
@@ -577,7 +556,6 @@ TextureImporter:
       Start (Moving) (64x64)_11: -2053020197276343620
       Start (Moving) (64x64)_15: 6183351285161404023
       Start (Moving) (64x64)_0: 4612172629948362417
-      Start (Moving) (64x64)_16: 7763743175354702852
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
