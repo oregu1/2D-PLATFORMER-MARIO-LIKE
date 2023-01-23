@@ -11,12 +11,12 @@ public class EnemyMoveRoute : MonoBehaviour
     int currentMoveRouteIndex = 0;
 
     Animator enemyAnimator;
-    Transform enemyTransform;
+    [SerializeField] private Transform enemyTransform;
 
-    private void Awake()
+    /*private void Awake()
     {
-        enemyTransform = GetComponent<Transform>();
-    }
+        enemyTransform = GameObject.FindGameObjectWithTag("Enemy").transform;
+    }*/
     private void Update()
     {
         enemyTransform.position = Vector2.MoveTowards(enemyTransform.position, moveRoutes[currentMoveRouteIndex].transform.position, Time.deltaTime * enemyMoveSpeed);
