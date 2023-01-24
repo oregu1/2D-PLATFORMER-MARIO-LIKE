@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
         hit //5
     }
 
-    AnimationState state = AnimationState.idle;
 
     public void Start()
     {
@@ -37,23 +36,13 @@ public class PlayerMovement : MonoBehaviour
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         MoveCharacter();
-        Jump();
-
         UpdateAnimationState();
     }
 
-    /*private void FixedUpdate()
-    {
-        
-    }*/
-
     private void MoveCharacter()
     {
-        
-
         playerRB.velocity = new Vector2(movement.x * playerSpeed, playerRB.velocity.y);
-
-        
+        Jump();
     }
 
     private void Jump()
@@ -71,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateAnimationState()
     {
+        AnimationState state;
         if(movement == Vector2.zero)
         {
             state = AnimationState.idle;
@@ -80,16 +70,18 @@ public class PlayerMovement : MonoBehaviour
             state = AnimationState.run;
             transform.localScale = new Vector2(0.8f, 0.8f);
         }
-        else if(movement.x < .1f)
+        else
         {
             state = AnimationState.run;
             transform.localScale = new Vector2(-0.8f, 0.8f);
         } 
-        else if(movement.y > .1f)
+        
+
+        if (playerRB.velocity.y > .1f)
         {
             state = AnimationState.jump;
-        } 
-        else if(movement.y < -.1f)
+        }
+        else if (playerRB.velocity.y < -.1f)
         {
             state = AnimationState.fall;
         }

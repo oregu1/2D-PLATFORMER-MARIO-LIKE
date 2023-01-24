@@ -5,17 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
+    private Animator portalAnimator;
     public string levelToLoad;
+
+    private void Awake()
+    {
+        portalAnimator = GetComponent<Animator>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            LoadLevel(levelToLoad);
+            portalAnimator.SetBool("isClosing", true);
+            
+            StartCoroutine(ClosePortalAndLoadLevel());
+
+            collision.gameObject.SetActive(false);
         }
     }
 
-    private void LoadLevel(string sceneName)
+    public void LoadLevel(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public IEnumerator ClosePortalAndLoadLevel()
+    {
+        
+        yield return new WaitForSeconds(1.0f);
+
+        LoadLevel(levelToLoad);
     }
 }
