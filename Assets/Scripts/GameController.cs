@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    
+    [SerializeField] private GameObject[] characterPrefabs;
+
+    private void Start()
+    {
+        LoadCharacterToScene();
+    }
     public void QuitGame()
     {
         Application.Quit();
@@ -25,5 +30,11 @@ public class GameController : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1.0f;
+    }
+
+    public void LoadCharacterToScene()
+    {
+        int characterIndex = PlayerPrefs.GetInt("CharacterIndex");
+        Instantiate(characterPrefabs[characterIndex]);
     }
 }
