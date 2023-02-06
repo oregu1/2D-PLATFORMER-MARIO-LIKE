@@ -6,13 +6,15 @@ public class PlayerMovement : MonoBehaviour
 {
     public float playerSpeed = 7.0f;
     public float jumpForce = 7.0f;
+    private bool doubleJump;
 
     Vector2 movement;
 
     //REFERENCES
     private Rigidbody2D playerRB;
     private Animator playerAnimator;
-    //private BoxCollider2D coll;
+    private BoxCollider2D coll;
+    [SerializeField] private LayerMask groundLayer;
 
     private enum AnimationState
     {
@@ -29,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        coll = GetComponent<BoxCollider2D>();
     }
 
     public void Update()
@@ -47,16 +50,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) /*&& IsGrounded()*/)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            playerRB.velocity = new Vector2(playerRB.velocity.x, jumpForce);
-        }
+            if(IsGrounded())
+            {
+                playerRB.velocity = new Vector2(playerRB.velocity.x, jumpForce);
+                doubleJump = true;
+            }
+            else if (doubleJump)
+            {
+                playerRB.velocity = new Vector2(playerRB.velocity.x, jumpForce);
+                doubleJump = false;
+            }
+
+        } 
     }
 
-    /*private bool IsGrounded()
+    private bool IsGrounded()
     {
-        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f);
-    }*/
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, groundLayer);
+    }
 
     private void UpdateAnimationState()
     {

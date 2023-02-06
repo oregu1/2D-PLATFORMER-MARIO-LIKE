@@ -6,7 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private GameObject[] characterPrefabs;
+    public Transform startingPoint;
 
+    private void Awake()
+    {
+        startingPoint = GameObject.FindWithTag("StartingPoint").GetComponent<Transform>();
+    }
     private void Start()
     {
         LoadCharacterToScene();
@@ -35,6 +40,7 @@ public class GameController : MonoBehaviour
     public void LoadCharacterToScene()
     {
         int characterIndex = PlayerPrefs.GetInt("CharacterIndex");
-        Instantiate(characterPrefabs[characterIndex]);
+        Instantiate(characterPrefabs[characterIndex], new Vector2(startingPoint.transform.position.x - 1, startingPoint.transform.position.y), Quaternion.identity);
+        
     }
 }

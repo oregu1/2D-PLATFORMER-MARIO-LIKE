@@ -104,6 +104,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 7
   jumpForce: 7
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!50 &8690236795999672104
 Rigidbody2D:
   serializedVersion: 4
