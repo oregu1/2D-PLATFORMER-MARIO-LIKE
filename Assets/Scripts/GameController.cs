@@ -25,6 +25,8 @@ public class GameController : MonoBehaviour
     public void LoadLevel(string levelName)
     {
         SceneManager.LoadScene(levelName);
+
+        ResumeGame();
     }
 
     public void PauseGame()

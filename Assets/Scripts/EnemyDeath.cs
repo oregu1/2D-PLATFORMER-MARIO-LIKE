@@ -4,17 +4,33 @@ using UnityEngine;
 
 public class EnemyDeath : MonoBehaviour
 {
-    public bool enemyIsKilled = false;
     private GameObject enemyPatrolRoute;
-    
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            enemyIsKilled = true;
             enemyPatrolRoute = GameObject.FindWithTag("PatrolRoute");
-            Destroy(this.gameObject);
-            Destroy(enemyPatrolRoute);
+
+            StartCoroutine(enemyDeath());
+
+
         }
+    }
+
+    private IEnumerator enemyDeath()
+    {
+
+        animator.SetBool("enemyIsKilled", true);
+
+        yield return new WaitForSeconds(0.3f);
+        Destroy(this.gameObject);
+        Destroy(enemyPatrolRoute);
     }
 }

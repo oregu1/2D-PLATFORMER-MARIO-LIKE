@@ -2887,7 +2887,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7388698114218101005, guid: 6f6ee146137f14f41bcc5cbdb6e8d972, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.69
+      value: -1.96
       objectReference: {fileID: 0}
     - target: {fileID: 7388698114386790097, guid: 6f6ee146137f14f41bcc5cbdb6e8d972, type: 3}
       propertyPath: m_RootOrder
@@ -2899,7 +2899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7388698114386790097, guid: 6f6ee146137f14f41bcc5cbdb6e8d972, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.52
+      value: 4.85
       objectReference: {fileID: 0}
     - target: {fileID: 7388698114386790097, guid: 6f6ee146137f14f41bcc5cbdb6e8d972, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2951,7 +2951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7388698114530194612, guid: 6f6ee146137f14f41bcc5cbdb6e8d972, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.89
+      value: 3.78
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -2964,6 +2964,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 575469077}
     m_Modifications:
+    - target: {fileID: 6913842447823701270, guid: 88348e6ebfc1fd641a4f3c37e2e06637, type: 3}
+      propertyPath: m_Size.y
+      value: 1.4550118
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913842447823701270, guid: 88348e6ebfc1fd641a4f3c37e2e06637, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.21315122
+      objectReference: {fileID: 0}
     - target: {fileID: 7971846909598154291, guid: 88348e6ebfc1fd641a4f3c37e2e06637, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3011,6 +3019,14 @@ PrefabInstance:
     - target: {fileID: 7971846909598154302, guid: 88348e6ebfc1fd641a4f3c37e2e06637, type: 3}
       propertyPath: m_Name
       value: Angry pig Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971846909598154303, guid: 88348e6ebfc1fd641a4f3c37e2e06637, type: 3}
+      propertyPath: m_Size.y
+      value: 0.1040616
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971846909598154303, guid: 88348e6ebfc1fd641a4f3c37e2e06637, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.6332762
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
