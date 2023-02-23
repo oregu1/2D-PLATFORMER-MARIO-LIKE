@@ -2956,6 +2956,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f6ee146137f14f41bcc5cbdb6e8d972, type: 3}
+--- !u!1 &375552411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7388698114530194613, guid: 6f6ee146137f14f41bcc5cbdb6e8d972, type: 3}
+  m_PrefabInstance: {fileID: 375552410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &375552412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7388698114218101002, guid: 6f6ee146137f14f41bcc5cbdb6e8d972, type: 3}
+  m_PrefabInstance: {fileID: 375552410}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &431007202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2964,6 +2974,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 575469077}
     m_Modifications:
+    - target: {fileID: 3717815388841819377, guid: 88348e6ebfc1fd641a4f3c37e2e06637, type: 3}
+      propertyPath: moveRoutes.Array.data[0]
+      value: 
+      objectReference: {fileID: 375552412}
+    - target: {fileID: 3717815388841819377, guid: 88348e6ebfc1fd641a4f3c37e2e06637, type: 3}
+      propertyPath: moveRoutes.Array.data[1]
+      value: 
+      objectReference: {fileID: 375552411}
     - target: {fileID: 6913842447823701270, guid: 88348e6ebfc1fd641a4f3c37e2e06637, type: 3}
       propertyPath: m_Size.y
       value: 1.4550118
