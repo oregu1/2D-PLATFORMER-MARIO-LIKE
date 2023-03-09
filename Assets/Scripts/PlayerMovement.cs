@@ -99,6 +99,11 @@ public class PlayerMovement : MonoBehaviour
             state = AnimationState.fall;
         }
 
+        if(doubleJump)
+        {
+            state = AnimationState.dblJump;
+        }
+
         playerAnimator.SetInteger("AnimState", (int)state);
     }
 }
